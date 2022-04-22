@@ -1,6 +1,6 @@
 package com.example.model;
 
-public class StoreDiscounts implements Discounts {
+public class StoreDiscount implements Discount {
     @Override
     public DiscountType getDiscountType() {
         return DiscountType.PERCENTAGE_BASED;

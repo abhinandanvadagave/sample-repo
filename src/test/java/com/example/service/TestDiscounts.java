@@ -8,11 +8,11 @@ import java.time.Month;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.example.model.Discounts;
+import com.example.model.Discount;
 import com.example.model.Product;
 import com.example.model.ProductType;
 import com.example.model.Products;
-import com.example.model.StoreDiscounts;
+import com.example.model.StoreDiscount;
 import com.example.model.User;
 import com.example.model.UserType;
 
@@ -24,7 +24,7 @@ public class TestDiscounts {
     private User affiliate;
     private User simpleUser;
     private User simpleUserWith2Years;
-    private Discounts discounts;
+    private Discount discounts;
 
     @Before
     public void setUp() {
@@ -35,7 +35,7 @@ public class TestDiscounts {
 
         groceryItem = new Product("Soap", 20, ProductType.GROCERY);
         otherItem = new Product("TV", 110, ProductType.ELECTRONICS);
-        discounts = new StoreDiscounts();
+        discounts = new StoreDiscount();
     }
 
     @Test

@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.example.model.Discounts;
+import com.example.model.Discount;
 import com.example.model.ProductType;
 import com.example.model.Products;
 import com.example.model.User;
@@ -25,12 +25,12 @@ public class ShoppingCart implements Cart {
 	@Getter
 	@Setter
 	private Map<Products, Integer> productQuantityMap;
-	private Discounts discounts;
+	private Discount discount;
 	private User user;
 
-	public ShoppingCart(Discounts discounts, User user) {
+	public ShoppingCart(Discount discount, User user) {
 		productQuantityMap = new LinkedHashMap<>();
-		this.discounts = discounts;
+		this.discount = discount;
 		this.user = user;
 	}
 
@@ -65,8 +65,8 @@ public class ShoppingCart implements Cart {
 			}
 		}
 
-		if (discounts != null)
-			total = discounts.applyDiscount(total);
+		if (discount != null)
+			total = discount.applyDiscount(total);
 		return total;
 	}
 }
