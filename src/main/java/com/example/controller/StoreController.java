@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.Discounts;
+import com.example.model.Discount;
 import com.example.model.Product;
 import com.example.model.ProductType;
 import com.example.model.Products;
-import com.example.model.StoreDiscounts;
+import com.example.model.StoreDiscount;
 import com.example.model.User;
 import com.example.model.UserType;
 import com.example.service.Cart;
@@ -34,7 +34,7 @@ public class StoreController {
 		Products jersey = new Product("Jersey", 900, ProductType.SPORTS);
 		Products tv = new Product("TV", 400, ProductType.ELECTRONICS);
 
-		Discounts discount = new StoreDiscounts();
+		Discount discount = new StoreDiscount();
 		Cart cart = new ShoppingCart(discount, employee);
 		cart.addProducts(grocery, 1);
 		cart.addProducts(jersey, 3);

@@ -1,6 +1,6 @@
 package com.example.model;
 
-public interface Discounts {
+public interface Discount {
     DiscountType getDiscountType();
     double applyDiscount(double amount);
 }
